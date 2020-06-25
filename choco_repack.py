@@ -90,7 +90,6 @@ def prepare_pack(pkg_dir, save_to):
                 shutil.move(os.path.join(tools_dir, 'tmp.ps1'), os.path.join(tools_dir, fn))
     else:
         print('WARN: Directory "tools/" is not exists in package.')
-        #raise Exception('directory "{}" is not found in package'.format(tools_dir))
 
 def do_pack(pkg_dir, save_to):
     pkg_name, pkg_version, pkg_dependencies = read_nuspec(pkg_dir)
