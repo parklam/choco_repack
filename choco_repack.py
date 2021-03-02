@@ -84,7 +84,7 @@ def prepare_pack(pkg_dir, save_to):
                                         print('Download failed: {}'.format(url.geturl()))
                                         raise e
                                 out_file.write(line.replace(re_result[0], \
-                                        os.path.join(download_dir, filename)))
+                                        '\'' + os.path.join(download_dir, filename) + '\'' ))
                         else:
                             out_file.write(line)
                 shutil.move(os.path.join(tools_dir, 'tmp.ps1'), os.path.join(tools_dir, fn))
