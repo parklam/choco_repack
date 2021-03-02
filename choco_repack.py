@@ -93,7 +93,7 @@ def prepare_pack(pkg_dir, save_to):
 
 def do_pack(pkg_dir, save_to):
     pkg_name, pkg_version, pkg_dependencies = read_nuspec(pkg_dir)
-    pack_cmd = 'choco pack {pkg_dir}\\{pkg_name}.nuspec --out {output_dir}'.format(
+    pack_cmd = 'choco pack {pkg_dir}\\{pkg_name}.nuspec --outputdirectory "{output_dir}"'.format(
             pkg_dir=pkg_dir, pkg_name=pkg_name, output_dir=save_to)
     #print('Execute command: {}'.format(pack_cmd))
     exec_result = subprocess.call(pack_cmd)
